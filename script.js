@@ -1,5 +1,6 @@
 const divClock = document.querySelector('.clock')
 const divData = document.querySelector('.data')
+const body = document.querySelector('.body')
 
 divData.addEventListener('onload', data())
 function data(){
@@ -25,6 +26,13 @@ function clock(){
   let hours = date.getHours()
   let minutes = date.getMinutes()
   let seconds = date.getSeconds()
+  if (hours > 17 | hours < 5) {
+    body.classList.add('night')
+    body.classList.remove('day')
+  } else {
+    body.classList.add('day')
+    body.classList.remove('night')
+  }
 
   function checkZero(element){
     if (!(element < 10)) {

@@ -3,8 +3,17 @@
   padding: 0;
 }
 
-body {
-  background-color: black;
+.day {
+  background-color: #7ec0ee;
+  transition: 800ms linear;
+}
+
+.night {
+  background-color: #1A1A1A;
+  transition: 800ms linear;
+}
+
+.body {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -15,6 +24,8 @@ body {
   font-weight: 800;
   letter-spacing: 4px;
   margin: 0 auto;
+
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, .7);
 }
 
 .data {
@@ -24,4 +35,5 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
   margin: 7% auto 0;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);  
 }
