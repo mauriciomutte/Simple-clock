@@ -1,6 +1,24 @@
+const divWelcome = document.querySelector('.welcome')
 const divClock = document.querySelector('.clock')
 const divData = document.querySelector('.data')
 const body = document.querySelector('.body')
+
+divWelcome.addEventListener('onload', welcome())
+function welcome(){
+  const date = new Date()
+  let hours = date.getHours()
+
+  if (hours > 5 && hours < 13) {
+    divWelcome.innerHTML = 'good morning!'
+  }
+  if (hours > 12 && hours < 18) {
+   divWelcome.innerHTML = 'good afternoon!'
+  }
+  if (hours > 17 || hours < 6) {
+    divWelcome.innerHTML = 'good evening!'
+    divWelcome.style.color = '#1a1a1a'
+  }
+}
 
 divData.addEventListener('onload', data())
 function data(){
