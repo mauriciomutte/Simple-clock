@@ -17,6 +17,19 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.welcome {
+  background-color: #fff;
+  border-radius: 2px;
+  color: #3f9ad9;
+  display: table;
+  font-size: 3vw;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: 1% auto;
+  padding: 5px 25px;
+  text-transform: uppercase;
+}
+
 .clock {
   color: #fff;
   display: table;
@@ -34,6 +47,6 @@
   font-size: 5vw;
   font-weight: 800;
   letter-spacing: 1px;
-  margin: 7% auto 0;
+  margin: 3% auto 0;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);  
 }
