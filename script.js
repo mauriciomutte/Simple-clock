@@ -1,4 +1,5 @@
 const divWelcome = document.querySelector('.welcome')
+const editWelcome = document.querySelector('.editWelcome')
 const divClock = document.querySelector('.clock')
 const divData = document.querySelector('.data')
 const body = document.querySelector('.body')
@@ -29,10 +30,15 @@ function welcome(){
       location.reload()
     }
   } else {
-      const name = prompt(`What's your name?`)
-      greeting(`, ${name}!`)
+    const name = prompt(`What's your name?`)
+    greeting(`, ${name}!`)
   }
 }
+
+editWelcome.addEventListener('click', function (){
+  localStorage.removeItem('name')
+  location.reload()
+})
 
 divData.addEventListener('onload', data())
 function data(){
