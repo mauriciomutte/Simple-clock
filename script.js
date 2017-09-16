@@ -7,15 +7,16 @@ divWelcome.addEventListener('onload', welcome())
 function welcome(){
   const date = new Date()
   let hours = date.getHours()
+  const name = prompt(`What's your name?`)
 
   if (hours > 5 && hours < 13) {
-    divWelcome.innerHTML = 'good morning!'
+    divWelcome.innerHTML = `good morning, ${name}!`
   }
   if (hours > 12 && hours < 18) {
-   divWelcome.innerHTML = 'good afternoon!'
+   divWelcome.innerHTML = `good afternoon, ${name}!`
   }
   if (hours > 17 || hours < 6) {
-    divWelcome.innerHTML = 'good evening!'
+    divWelcome.innerHTML = `good evening, ${name}!`
     divWelcome.style.color = '#1a1a1a'
   }
 }
