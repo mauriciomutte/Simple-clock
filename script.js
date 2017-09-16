@@ -8,16 +8,24 @@ function welcome(){
   const date = new Date()
   let hours = date.getHours()
   const name = prompt(`What's your name?`)
+  const goodDay = ['Good Morning', 'Good Afternoon', 'Good Evening']
+  function greeting(txt){
+    if (hours > 5 && hours < 13) {
+      divWelcome.innerHTML = goodDay[0] + txt
+    }
+    if (hours > 12 && hours < 18) {
+     divWelcome.innerHTML = goodDay[1] + txt
+    }
+    if (hours > 17 || hours < 6) {
+      divWelcome.innerHTML = goodDay[2] + txt
+      divWelcome.style.color = '#1a1a1a'
+    }
+  }
 
-  if (hours > 5 && hours < 13) {
-    divWelcome.innerHTML = `good morning, ${name}!`
-  }
-  if (hours > 12 && hours < 18) {
-   divWelcome.innerHTML = `good afternoon, ${name}!`
-  }
-  if (hours > 17 || hours < 6) {
-    divWelcome.innerHTML = `good evening, ${name}!`
-    divWelcome.style.color = '#1a1a1a'
+  if (name === '' || name === ' ' || name === null) {
+    greeting('!')
+  } else {
+    greeting(`, ${name}!`)
   }
 }
 
