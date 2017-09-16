@@ -1,5 +1,5 @@
-const divWelcome = document.querySelector('.welcome')
-const editWelcome = document.querySelector('.editWelcome')
+const divWelcome = document.querySelector('.welcome-title')
+const editWelcome = document.querySelector('.welcome-edit')
 const divClock = document.querySelector('.clock')
 const divData = document.querySelector('.data')
 const body = document.querySelector('.body')
