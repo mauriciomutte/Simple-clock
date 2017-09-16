@@ -5,12 +5,12 @@
 
 .day {
   background-color: #3f9ad9;
-  transition: 800ms linear;
+  transition: .4s linear;
 }
 
 .night {
   background-color: #1A1A1A;
-  transition: 800ms linear;
+  transition: .4s linear;
 }
 
 .body {
