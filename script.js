@@ -7,9 +7,8 @@ divWelcome.addEventListener('onload', welcome())
 function welcome(){
   const date = new Date()
   let hours = date.getHours()
-  const name = prompt(`What's your name?`)
   const goodDay = ['Good Morning', 'Good Afternoon', 'Good Evening']
-  function greeting(txt){
+  function greeting(txt) {
     if (hours > 5 && hours < 13) {
       divWelcome.innerHTML = goodDay[0] + txt
     }
@@ -22,10 +21,16 @@ function welcome(){
     }
   }
 
-  if (name === '' || name === ' ' || name === null) {
-    greeting('!')
+  if (typeof(Storage) !== 'undefined') {
+    if (localStorage.name && localStorage.name !== 'null' && localStorage.name !== '') {
+      greeting(`, ${localStorage.name}!`)
+    } else {
+      localStorage.name = prompt(`What's your name?`)
+      location.reload()
+    }
   } else {
-    greeting(`, ${name}!`)
+      const name = prompt(`What's your name?`)
+      greeting(`, ${name}!`)
   }
 }
 
