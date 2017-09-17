@@ -17,17 +17,47 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.welcome {
+  display: table;
+  margin: 1% auto;
+}
+
 .welcome-title {
   background-color: #fff;
   border-radius: 2px;
   color: #3f9ad9;
-  display: table;
+  display: inline-block;
   font-size: 3vw;
   font-weight: 700;
   letter-spacing: 5px;
-  margin: 1% auto;
   padding: 5px 25px;
   text-transform: uppercase;
+}
+
+.welcome-edit {
+  background-color: rgba(0, 0, 0, .5);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 2px;
+  outline: none;
+  padding: 3px 3px 1px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.edit-icon { fill: #F1F1F1;}
+
+.welcome-edit:hover { background-color: rgba(0, 0, 0, .7);}
+
+.edit-icon:hover { fill: #D1D1D1;}
+
+@media (min-width: 910px) {
+  .welcome-edit { opacity: 0;}
+
+  .welcome:hover .welcome-edit { opacity: 1;}
 }
 
 .clock {
