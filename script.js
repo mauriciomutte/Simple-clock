@@ -74,7 +74,7 @@ function clock(){
 
   if (hours === 6 && minutes === 00 && seconds === 00) {
     location.reload()
-  } else if (hours === 12 && minutes === 00 && seconds === 00) {
+  } else if (hours === 13 && minutes === 00 && seconds === 00) {
     location.reload()
   } else if (hours === 18 && minutes === 00 && seconds === 00) {
     location.reload()
