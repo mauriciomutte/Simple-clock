@@ -72,6 +72,14 @@ function clock(){
     body.classList.remove('night')
   }
 
+  if (hours === 6 && minutes === 00 && seconds === 00) {
+    location.reload()
+  } else if (hours === 12 && minutes === 00 && seconds === 00) {
+    location.reload()
+  } else if (hours === 18 && minutes === 00 && seconds === 00) {
+    location.reload()
+  }
+
   function checkZero(element){
     if (!(element < 10)) {
       return `${element}`
